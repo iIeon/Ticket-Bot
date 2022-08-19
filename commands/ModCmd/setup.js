@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
-const { ticket_set } = require("../../config.json");
+const config = require("../../config.json");
 
 module.exports = {
     name: "setup",
     run: async (message, args, client, default_prefix) => {
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) return;
-        let ticketRoom = client.channels.cache.get(ticket_set.ticket_chat);
+        if(!config.owners.includes(message.author.id)) return;
+        let ticketRoom = client.channels.cache.get(config.ticket_set.ticket_chat);
         if (!ticketRoom) return;
 
         let embed = new Discord.MessageEmbed()
