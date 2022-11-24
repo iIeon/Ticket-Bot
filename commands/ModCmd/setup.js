@@ -13,7 +13,7 @@ module.exports = {
             .setAuthor({ name: "Store", iconURL: message.author.avatarURL() })
             .setColor("#ffce00")
             .setThumbnail(message.author.avatarURL())
-            .setFooter({ text: `جميع الحقوق محفوظة`, iconURL: message.author.avatarURL() })
+            .setTimeout()
             .addField("**الخدمات**",
                 `مابات [ 🌆 ]\nتصاميم [ 🖌 ]\nسكنات فايف إم [ 🧙‍♂️ ]\nبرمجة [ ⌨ ]\nاخرى [ ❓ ]`)
 
